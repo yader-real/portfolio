@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@1,700&family=Roboto:ital@1&display=swap');
+
+/* |reset| */
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+input,button,textarea{
+    font: inherit;
+}
+
+:root{
+    /* fonts */
+    --FS: clamp(1rem,2.2vh,1.5rem);
+    /* colors */
+    --BODY-BGCOLOR:#012C37ff;
+    --FONT-COLOR:whitesmoke;
+}
+
+/* |General Styles| */
+
+html{
+    scroll-behavior: smooth;
+    font-size: var(--FS) ;
+    font-family: 'Chakra Petch', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    background-color: var(--BODY-BGCOLOR);
+    color: var(--FONT-COLOR);
+    min-height: 100v;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+    border-left: 1px solid #333;
+    border-right: 1px solid #333;
+    
+}
+
+/* |idiom checkbox| */
+.en{
+    color:#333; 
+   
+}
+.es{
+    
+    color: #00a1ff;
+}
+.check{
+    position: relative;
+    width: 50px;
+}
+.check::before{
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 25px;
+    background: #333;
+    border-radius: 25px;
+}
+.check::after{
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background: #fff;
+    border-radius: 25px;
+    transition: 0.25s;
+    border: 2px solid #333;
+    box-sizing: border-box;
+}
+.check:checked::after{
+    left: 25px;
+    border: 2px solid #00a1ff;
+}
+.check:checked::before{
+    background: #00a1ff;
+}
+
+/* fin idiom check */
+
+/* Footer */
+.footer{
+    background-color:rgb(9, 47, 34);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
