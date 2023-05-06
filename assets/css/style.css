@@ -66,6 +66,49 @@ h6 {
   opacity: 1;
 }
 
+/* |idiom checkbox| */
+.en{
+    color:#fff; 
+   
+}
+.es{
+    
+    color: #00a1ff;
+}
+.check{
+    position: relative;
+    width: 40px;
+}
+.check::before{
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 20px;
+    background: #333;
+    border-radius: 25px;
+}
+.check::after{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border-radius: 25px;
+    transition: 0.25s;
+    border: 2px solid #333;
+    box-sizing: border-box;
+}
+.check:checked::after{
+    left: 25px;
+    border: 2px solid #00a1ff;
+}
+.check:checked::before{
+    background: #00a1ff;
+}
+
+/* fin idiom check */
+
+
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
